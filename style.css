@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Styling ToDoList body */
+.container {
+    background: #f7f7f7; /* Change the background color */
+    max-width: 450px;
+    width: 100%;
+    margin: 100px auto; /* Adjust the margin */
+    padding: 40px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.todo-box {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 7px 5px #b5b0b0;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+/* ToDoList heading position changed */
+.heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #333; /* Change the text color */
+}
+
+/* Styling input-box, hover and focus */
+.inputbox {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border-radius: 5px;
+    background: #eeefef;
+}
+
+.inputbox input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none; /* Remove the outline on focus */
+}
+
+.inputbox:hover {
+    background-color: #ddd; /* Change the hover background color */
+}
+
+/* Styling icon size */
+.icon {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+/* Plus button hide when you didn't type */
+#addbutton {
+    display: none;
+}
+
+.clckbutton {
+    display: flex;
+    justify-content: space-between;
+    color: #777; /* Change the button color */
+}
+
+/* Styling horizontal line dotted */
+hr {
+    border: none;
+    border-top: 1px dotted #ccc; /* Change the line color */
+}
+
+/* Styling ToDoList when task added by JavaScript */
+.itemlist li {
+    position: relative;
+    background-color: #f4f4f4; /* Change the background color */
+    overflow: hidden;
+    margin: 7px;
+    padding-left: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    word-break: break-all;
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+/* Styling Delete button for task delete */
+.itemlist li .del {
+    transform: rotate(45deg); /* Rotate the delete button */
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the button */
+    background-color: #ff6b6b; /* Change the button color */
+    color: #fff; /* Change the text color */
+    padding: 5px 10px;
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    cursor: pointer;
+}
+
+/* Delete button visible when you hover on task */
+.itemlist li:hover .del {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Extra styling */
+.pendingTasks {
+    color: black;
+    padding-right: 3px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #555; /* Change the button hover color */
+}
+
+/* Hide the browser's default checkbox */
+.box input {
+    display: none;
+}
+
+/* Create a custom checkbox for list item */
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px; /* Make the checkbox slightly rounded */
+    background-color: #eeb;
+}
+
+/* When the checkbox is checked, add a blue background */
+.box input:checked~.checkmark {
+    background-color: #007bff; /* Change the checked background color */
+}
+
+/* Create the checkmark (indicator), hidden when not checked */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Style the checkmark/indicator */
+.box .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 3px;
+    height: 8px;
+    border: solid gray;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Show the checkmark when checked */
+.box input:checked~.checkmark:after {
+    display: block;
+}
